@@ -1,0 +1,19 @@
+#guess input[type="button"] {
+  background: none repeat scroll 0 0 #66A3D2;
+  border-color: #FFFFFF #327CB5 #327CB5 #FFFFFF;
+  border-radius: 10px 10px 10px 10px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 3px #333333;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+img{
+    width:200px;
+    height: 200px;
+}
