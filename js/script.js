@@ -21,14 +21,37 @@
 //GLOBAL VARIABLES
 /*global $*/
 var userChoice = "hello";
-var computerchoice = "";
+var computerchoice = choices;
 var winner = "";
 var choices = ['rock', 'paper', 'scissors', ]
+
+
 
 $(document).ready(function() {
 
 
     $("#try").click(function() {
-      $("h2").append($("#input").val());
+        var entered= $("#input").val();
+        var random = choices[Math.floor(Math.random() * choices.length)];
+        $("h2").html("Your choice: " + entered);
+        $("h3").html("Computer choice: " + random);
+
+        if (entered === "rock" && random === "rock") {
+            
+           $("#result").html("No winner");
+        }
+       
     })
 });
+
+
+
+
+/*console.log(computerchoice.length);
+
+//Challenge 2: Generate a random number between 0 and the amount of items in this array. Print this number to the console.
+console.log( Math.floor(Math.random()*computerchoice.length+1));
+
+//Challenge 3: Using the random number, select a random item out of the array.
+console.log(computerchoice[0]);
+*/
