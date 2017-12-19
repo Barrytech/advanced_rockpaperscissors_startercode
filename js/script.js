@@ -31,17 +31,27 @@ $(document).ready(function() {
 
 
     $("#try").click(function() {
-        var entered= $("#input").val();
+        var entered = $("#input").val();
         var random = choices[Math.floor(Math.random() * choices.length)];
         $("h2").html("Your choice: " + entered);
         $("h3").html("Computer choice: " + random);
 
-        if (entered === "rock" && random === "rock") {
-            
-           $("#result").html("No winner");
+        if ((entered === "rock" && random === "rock") || (entered === "paper" && random === "paper") || (entered === "scissors" && random === "scissors")) {
+
+            $("#result").html("No winner");
         }
-       
+        else if ((entered === "paper" && random === "rock") || (entered === "scissors" && random === "paper") || (entered === "rock" && random === "scissors")){
+            $("#result").html("You have won");
+        }
+        else if((entered === "scissors" && random === "rock") || (entered === "rock" && random === "paper") || (entered === "paper" && random === "scissors")){
+            $("#result").html("The computer wins");
+            
+        }else{
+            alert("Invalid choice");
+        }
+
     })
+    $("#inpupt").val("");
 });
 
 
